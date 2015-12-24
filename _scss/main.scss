@@ -1,0 +1,271 @@
+body {
+    overflow-x: hidden;
+    background: url(../images/white_tiles.png);
+}
+
+p {
+    font-size: 20px;
+}
+
+p.small {
+    font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: $brand-primary;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+hr.shield-light,
+hr.shield-primary {
+    padding: 0;
+    border: none;
+    border-top: solid 3px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+
+hr.shield-light:after,
+hr.shield-primary:after {
+    content: "\f132";
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 2em;
+    padding: 0 0.25em;
+}
+
+hr.shield-light {
+    border-color: white;
+}
+
+hr.shield-light:after {
+    background-color: $brand-primary;
+    color: white;
+}
+
+hr.shield-primary {
+    border-color: $brand-secondary;
+}
+
+hr.shield-primary:after {
+    background: url(../images/white_tiles.png);
+    color: $brand-secondary;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    .container {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .intro-text {
+        .name {
+            display: block;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 2em;
+        }
+        .skills {
+            font-size: 1.25em;
+            font-weight: 300;
+        }
+    }
+}
+
+@media(min-width:768px) {
+    header {
+        .container {
+            padding-top: 200px;
+            padding-bottom: 100px;
+        }
+        .intro-text {
+            .name {
+                font-size: 4.75em;
+            }
+            .skills {
+                font-size: 1.75em;
+            }
+        }
+    }
+}
+
+@media(min-width:768px) {
+    .navbar-fixed-top {
+        padding: 25px 0;
+        -webkit-transition: padding 0.3s;
+        -moz-transition: padding 0.3s;
+        transition: padding 0.3s;
+        .navbar-brand {
+            font-size: 2em;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+            padding: 14px 15px;
+        }
+    }
+    .navbar-fixed-top.navbar-shrink, .navbar-fixed-top.cbp-af-header-shrink {
+        padding: 10px 0;
+        .navbar-brand {
+            font-size: 1.5em;
+            padding: 19.5px 15px;
+        }
+    }
+}
+
+.navbar {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    a:focus {
+        outline: none;
+    }
+    .navbar-nav {
+        letter-spacing: 1px;
+        li {
+            a:focus {
+                outline: none;
+            }
+        }
+    }
+    
+    .navbar-brand:hover {
+        color: $brand-primary;
+    }
+}
+
+.navbar-default,
+.navbar-inverse {
+    border: none;
+    background: $brand-secondary;
+    .navbar-nav > li > a:hover {
+        color: white;
+        background: darken($brand-secondary, 5%);
+    }
+}
+
+section {
+    padding: 100px 0;
+    h2 {
+        margin: 0;
+        font-size: 2em;
+    }
+}
+
+
+@media(min-width:768px) {
+    section {
+        h2 {
+            font-size: 3em;
+        }
+    }
+}
+
+section.primary {
+    background: $brand-primary;
+    color: white;
+
+    a,
+    a:hover,
+    a:focus,
+    a:active,
+    a.active {
+      color: $brand-secondary;
+      outline: none;
+    }
+}
+
+@media(max-width:767px) {
+    section {
+        padding: 75px 0;
+    }
+    section.first {
+        padding-top: 75px;
+    }
+}
+
+.btn-outline {
+    color: white;
+    font-size: 20px;
+    border: solid 2px white;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: $brand-primary;
+        background: white;
+        border: solid 2px white;
+    }
+}
+
+footer {
+    color: white;
+    h3 {
+        margin-bottom: 30px;
+    }
+    .footer-above {
+        padding-top: 50px;
+        background-color: $brand-secondary;
+    }
+    .footer-col {
+        margin-bottom: 50px;
+    }
+    .footer-below {
+        padding: 25px 0;
+        background-color: darken($brand-secondary, 5%);
+    }
+}
+
+.btn-social {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active {
+    outline: none;
+}
+
+.scroll-top {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 50px;
+    height: 50px;
+    z-index: 1049;
+    .btn {
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        line-height: 28px;
+        padding: 8px;
+        &:focus {
+            outline: none;
+        }
+    }
+}
