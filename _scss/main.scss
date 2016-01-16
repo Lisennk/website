@@ -31,19 +31,7 @@ hr.shield-primary {
     border: none;
     border-top: solid 3px;
     text-align: center;
-    max-width: 250px;
     margin: 25px auto 30px;
-}
-
-hr.shield-light:after,
-hr.shield-primary:after {
-    content: "\f132";
-    font-family: FontAwesome;
-    display: inline-block;
-    position: relative;
-    top: -0.7em;
-    font-size: 2em;
-    padding: 0 0.25em;
 }
 
 hr.shield-light {
@@ -71,9 +59,14 @@ hr.shield-primary:after {
 header {
     text-align: center;
     .container {
-        padding-top: 100px;
+        padding-top: 110px;
         padding-bottom: 50px;
     }
+    
+    img {
+        margin: 0 auto 20px auto;
+    }
+    
     .intro-text {
         .name {
             display: block;
@@ -84,6 +77,14 @@ header {
         .skills {
             font-size: 1.25em;
             font-weight: 300;
+            display: block;
+        }
+    }
+    .action-buttons {
+        margin-top: 30px;
+        
+        div + div {
+            margin-top: 20px;
         }
     }
 }
@@ -91,8 +92,8 @@ header {
 @media(min-width:768px) {
     header {
         .container {
-            padding-top: 200px;
-            padding-bottom: 100px;
+            padding-top: 150px;
+            padding-bottom: 50px;
         }
         .intro-text {
             .name {
@@ -100,6 +101,11 @@ header {
             }
             .skills {
                 font-size: 1.75em;
+            }
+        }
+        .action-buttons {
+            div + div {
+                margin-top: 0;
             }
         }
     }
@@ -159,7 +165,7 @@ header {
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
     h2 {
         margin: 0;
         font-size: 2em;
@@ -190,9 +196,6 @@ section.primary {
 }
 
 @media(max-width:767px) {
-    section {
-        padding: 75px 0;
-    }
     section.first {
         padding-top: 75px;
     }
