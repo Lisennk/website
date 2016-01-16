@@ -3,4 +3,6 @@ lib/
 dist/
 _site/
 .sass-cache/
+.publish/
+.vscode/
 js/bit.min.js
