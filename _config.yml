@@ -6,4 +6,4 @@ sass:
   sass_dir: _scss
   style: :compressed
 
-exclude: ['node_modules', 'gulpfile.js', 'package.json', 'js/theme.js']
+exclude: ['node_modules', 'gulpfile.js', 'package.json', 'js/theme.js', './bitwarden-website']
