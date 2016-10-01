@@ -11,10 +11,7 @@
         "run-sequence": "1.1.3",
         "merge-stream": "1.0.0",
         "jquery": "2.1.4",
-        "font-awesome": "4.4.0",
-        "bootstrap": "3.3.5",
-        "animated-header": "https://github.com/codrops/AnimatedHeader.git",
-        "desandro-classie": "1.0.1",
-        "bootswatch": "3.3.5"
+        "font-awesome": "4.6.3",
+        "bootstrap": "3.3.7"
     }
 }

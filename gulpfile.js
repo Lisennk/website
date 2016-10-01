@@ -56,13 +56,10 @@ gulp.task('lib', ['clean:lib'], function () {
         {
             src: [
                 paths.npmDir + 'bootstrap/dist/**/fonts/*',
-                paths.npmDir + 'bootstrap/dist/**/js/bootstrap.min.js'
+                paths.npmDir + 'bootstrap/dist/**/js/bootstrap.min.js',
+                paths.npmDir + 'bootstrap/dist/**/css/bootstrap.min.css'
             ],
             dest: paths.libDir + 'bootstrap'
-        },
-        {
-            src: paths.npmDir + 'bootswatch/flatly/bootstrap.min.css',
-            dest: paths.libDir + 'bootstrap/css'
         },
         {
             src: [
