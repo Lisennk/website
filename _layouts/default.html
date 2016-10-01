@@ -16,7 +16,7 @@
     <meta name="x-stylesheet-test-fa" content="" class="fa" />
     <script>!function (a, b, c) { var d, e = document, f = e.getElementsByTagName('SCRIPT'), g = f[f.length - 1].previousElementSibling, h = e.defaultView && e.defaultView.getComputedStyle ? e.defaultView.getComputedStyle(g) : g.currentStyle; if (h && h[a] !== b) for (d = 0; d < c.length; d++) e.write('<link rel="stylesheet" href="' + c[d] + '"/>') }('font-family', 'FontAwesome', ['lib\/font-awesome\/css\/font-awesome.min.css']);</script>
 
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,300italic,400italic,600italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,300italic,400italic,600italic|Lato:400,700,400italic" rel="stylesheet" type="text/css">
 
     <link href="css/styles.min.css" rel="stylesheet">
 
@@ -29,7 +29,7 @@
 
 <body id="page-top" class="index">
 
-    <nav class="navbar navbar-default navbar-fixed-top cbp-af-header">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -60,52 +60,8 @@
     {{content}}
 
     <footer class="text-center">
-        <!--
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Apps</h3>
-                        <p>Coming soon...</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/bitwarden" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Open Source</h3>
-                        <p>bitwarden is 100% open source. Check us out on <a href="https://github.com/bitwarden" target="_blank">GitHub</a> and contribute!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        &copy; Copyright  {{ 'now' | date: "%Y" }}, bitwarden
-                    </div>
-                </div>
-            </div>
-        </div>
+        &copy; Copyright  {{ 'now' | date: "%Y" }}, bitwarden
     </footer>
-
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>(window.jQuery || document.write('<script src="lib\/jquery\/jquery.min.js"><\/script>'));</script>

@@ -100,6 +100,13 @@ gulp.task('deploy', [], function () {
         .pipe(ghPages({ cacheDir: './.publish' }));
 });
 
+gulp.task('lesscompile', function (cb) {
+    return runSequence(
+        'less',
+        'min:css',
+        cb);
+});
+
 gulp.task('less', function () {
     return gulp.src(paths.lessDir + 'styles.less')
         .pipe(less())
@@ -107,5 +114,5 @@ gulp.task('less', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.lessDir + '*.less', ['less']);
+    gulp.watch(paths.lessDir + '*.less', ['lesscompile']);
 });
