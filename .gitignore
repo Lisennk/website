@@ -6,3 +6,5 @@ _site/
 .publish/
 .vscode/
 js/bit.min.js
+.vs/
+npm-debug.log
