@@ -6885,7 +6885,12 @@ footer {
   padding: 25px 0;
 }
 .content {
-  padding-top: 120px;
+  padding-top: 80px;
+}
+@media (min-width: 768px) {
+  .content {
+    padding-top: 120px;
+  }
 }
 .github-corner {
   display: none;
