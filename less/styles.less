@@ -1,3 +1,7 @@
+﻿@import "../node_modules/bootstrap/less/bootstrap.less";
+@import "variables.less";
+@import "mixins.less";
+
 body {
     overflow-x: hidden;
     background: url(../images/white_tiles.png);
@@ -16,12 +20,12 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-    color: $brand-primary;
+    color: @brand-primary;
     outline: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: @font-family-sans-serif;
     font-weight: 300;
 }
 
@@ -39,12 +43,12 @@ hr.shield-light {
 }
 
 hr.shield-light:after {
-    background-color: $brand-primary;
+    background-color: @brand-primary;
     color: white;
 }
 
 hr.shield-primary {
-    border-color: $brand-secondary;
+    border-color: @brand-secondary;
 }
 
 .img-centered {
@@ -53,31 +57,34 @@ hr.shield-primary {
 
 header {
     text-align: center;
+
     .container {
         padding-top: 110px;
         padding-bottom: 50px;
     }
-    
+
     img {
         margin: 0 auto 20px auto;
     }
-    
+
     .intro-text {
         .name {
             display: block;
-            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: @font-family-sans-serif;
             font-weight: 300;
             font-size: 2em;
         }
+
         .skills {
             font-size: 1.25em;
             font-weight: 300;
             display: block;
         }
     }
+
     .action-buttons {
         margin-top: 30px;
-        
+
         div + div {
             margin-top: 20px;
         }
@@ -90,14 +97,17 @@ header {
             padding-top: 150px;
             padding-bottom: 50px;
         }
+
         .intro-text {
             .name {
                 font-size: 4.75em;
             }
+
             .skills {
                 font-size: 1.75em;
             }
         }
+
         .action-buttons {
             div + div {
                 margin-top: 0;
@@ -112,6 +122,7 @@ header {
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
         transition: padding 0.3s;
+
         .navbar-brand {
             font-size: 2em;
             -webkit-transition: all 0.3s;
@@ -120,8 +131,10 @@ header {
             padding: 14px 15px;
         }
     }
+
     .navbar-fixed-top.navbar-shrink, .navbar-fixed-top.cbp-af-header-shrink {
         padding: 10px 0;
+
         .navbar-brand {
             font-size: 1.5em;
             padding: 19.5px 15px;
@@ -130,37 +143,42 @@ header {
 }
 
 .navbar {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: @font-family-sans-serif;
     font-weight: 300;
+
     a:focus {
         outline: none;
     }
+
     .navbar-nav {
         letter-spacing: 1px;
+
         li {
             a:focus {
                 outline: none;
             }
         }
     }
-    
+
     .navbar-brand:hover {
-        color: $brand-primary;
+        color: @brand-primary;
     }
 }
 
 .navbar-default,
 .navbar-inverse {
     border: none;
-    background: $brand-secondary;
+    background: @brand-secondary;
+
     .navbar-nav > li > a:hover {
         color: white;
-        background: darken($brand-secondary, 5%);
+        background: darken(@brand-secondary, 5%);
     }
 }
 
 section {
     padding: 50px 0;
+
     h2 {
         margin: 0;
         font-size: 2em;
@@ -177,7 +195,7 @@ section {
 }
 
 section.primary {
-    background: $brand-primary;
+    background: @brand-primary;
     color: white;
 
     a,
@@ -185,8 +203,8 @@ section.primary {
     a:focus,
     a:active,
     a.active {
-      color: $brand-secondary;
-      outline: none;
+        color: @brand-secondary;
+        outline: none;
     }
 }
 
@@ -203,11 +221,12 @@ section.primary {
     background: transparent;
     transition: all 0.3s ease-in-out;
     margin-top: 15px;
+
     &:hover,
     &:focus,
     &:active,
     &.active {
-        color: $brand-primary;
+        color: @brand-primary;
         background: white;
         border: solid 2px white;
     }
@@ -215,19 +234,23 @@ section.primary {
 
 footer {
     color: white;
+
     h3 {
         margin-bottom: 30px;
     }
+
     .footer-above {
         padding-top: 50px;
-        background-color: $brand-secondary;
+        background-color: @brand-secondary;
     }
+
     .footer-col {
         margin-bottom: 50px;
     }
+
     .footer-below {
         padding: 25px 0;
-        background-color: darken($brand-secondary, 5%);
+        background-color: darken(@brand-secondary, 5%);
     }
 }
 
@@ -255,6 +278,7 @@ footer {
     width: 50px;
     height: 50px;
     z-index: 1049;
+
     .btn {
         font-size: 20px;
         width: 50px;
@@ -262,6 +286,7 @@ footer {
         border-radius: 100%;
         line-height: 28px;
         padding: 8px;
+
         &:focus {
             outline: none;
         }

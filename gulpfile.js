@@ -2,7 +2,9 @@ var gulp = require('gulp'),
     rimraf = require('rimraf'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
+    cssmin = require('gulp-cssmin'),
     uglify = require('gulp-uglify'),
+    less = require('gulp-less'),
     ghPages = require('gulp-gh-pages'),
     runSequence = require('run-sequence'),
     merge = require('merge-stream');
@@ -14,13 +16,18 @@ paths.libDir = './lib/';
 paths.npmDir = './node_modules/';
 paths.cssDir = './css/';
 paths.jsDir = './js/';
+paths.lessDir = './less/';
 
 gulp.task('build', function (cb) {
     return runSequence(
         'clean',
-        'lib',
+        ['lib', 'less'],
         'min',
         cb);
+});
+
+gulp.task('clean:css', function (cb) {
+    return rimraf(paths.cssDir, cb);
 });
 
 gulp.task('clean:js', function (cb) {
@@ -35,7 +42,7 @@ gulp.task('clean:dist', function (cb) {
     return rimraf(paths.dist, cb);
 });
 
-gulp.task('clean', ['clean:js', 'clean:lib', 'clean:dist']);
+gulp.task('clean', ['clean:js', 'clean:lib', 'clean:dist', 'clean:css']);
 
 gulp.task('min:js', ['clean:js'], function () {
     return gulp.src([
@@ -49,7 +56,14 @@ gulp.task('min:js', ['clean:js'], function () {
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('min', ['min:js']);
+gulp.task('min:css', [], function () {
+    return gulp.src([paths.cssDir + '**/*.css', '!' + paths.cssDir + '**/*.min.css'], { base: '.' })
+        .pipe(cssmin())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('.'));
+});
+
+gulp.task('min', ['min:js', 'min:css']);
 
 gulp.task('lib', ['clean:lib'], function () {
     var libs = [
@@ -84,4 +98,14 @@ gulp.task('lib', ['clean:lib'], function () {
 gulp.task('deploy', [], function () {
     return gulp.src(paths.dist + '**/*')
         .pipe(ghPages({ cacheDir: './.publish' }));
+});
+
+gulp.task('less', function () {
+    return gulp.src(paths.lessDir + 'styles.less')
+        .pipe(less())
+        .pipe(gulp.dest(paths.cssDir));
+});
+
+gulp.task('watch', function () {
+    gulp.watch(paths.lessDir + '*.less', ['less']);
 });
