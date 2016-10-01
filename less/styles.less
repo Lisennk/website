@@ -69,15 +69,11 @@ header {
         display: block;
         margin-bottom: 20px;
     }
+}
 
-    .downloads {
-        .browsers {
-            display: none;
-        }
-
-        .mobile {
-            margin: 0 -10px 0 0;
-        }
+.downloads {
+    .browsers {
+        display: none;
     }
 }
 
@@ -94,22 +90,27 @@ header {
         }
 
         .downloads {
-            div {
-                display: inline-block;
-            }
-
             .browsers {
                 margin-right: 70px;
-                display: inline-block;
-
-                img {
-                    margin-right: 20px;
-                }
             }
+        }
+    }
 
-            .mobile {
-                margin: 0;
+    .downloads {
+        div {
+            display: inline-block;
+        }
+
+        .browsers {
+            display: inline-block;
+
+            img {
+                margin-right: 20px;
             }
+        }
+
+        .mobile {
+            margin: 0;
         }
     }
 }
@@ -193,6 +194,20 @@ section.primary {
     }
 }
 
+.action-buttons {
+    border-top: 1px solid #ccc;
+    padding: 50px 0 50px;
+    text-align: center;
+
+    h2 {
+        margin: 0 0 30px;
+    }
+
+    .downloads {
+        margin-top: 30px;
+    }
+}
+
 footer {
     position: absolute;
     bottom: 0;
@@ -256,4 +271,12 @@ footer {
     .github-corner .octo-arm {
         animation: octocat-wave 560ms ease-in-out;
     }
+}
+
+.btn-secondary {
+    .button-variant(#fff, @brand-secondary, darken(@brand-secondary, 5%));
+}
+
+.btn-xl {
+    .button-size(12px; 20px; (@font-size-base * 1.5); 1.5; @btn-border-radius-large);
 }
