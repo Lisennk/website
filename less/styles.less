@@ -194,17 +194,43 @@ section.primary {
     }
 }
 
+section#autofill {
+    padding-bottom: 10px;
+
+    img {
+        margin-top: 30px;
+    }
+
+    @media(min-width:@screen-sm) {
+        img {
+            margin-top: 0;
+        }
+    }
+}
+
 .action-buttons {
     border-top: 1px solid #ccc;
-    padding: 50px 0 50px;
+    padding: 30px 0 30px;
     text-align: center;
 
     h2 {
-        margin: 0 0 30px;
+        margin: 0 0 15px;
     }
 
     .downloads {
         margin-top: 30px;
+    }
+
+    .btn:last-child {
+        margin-top: 10px;
+    }
+
+    @media(min-width:@screen-sm) {
+        padding: 50px 0 50px;
+
+        h2 {
+            margin: 0 0 30px;
+        }
     }
 }
 
