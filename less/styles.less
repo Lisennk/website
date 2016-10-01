@@ -2,8 +2,14 @@
 @import "variables.less";
 @import "mixins.less";
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
-    overflow-x: hidden;
+    /* Margin bottom by footer height */
+    margin-bottom: 71px;
     background: url(../images/white_tiles.png);
 }
 
@@ -49,34 +55,28 @@ header {
     text-align: center;
 
     .container {
-        padding-top: 110px;
-        padding-bottom: 50px;
+        padding-top: 90px;
+        padding-bottom: 30px;
     }
 
     img {
-        margin: 0 auto 20px auto;
+        margin: 0 auto;
     }
 
     .intro-text {
-        .name {
-            display: block;
-            font-family: @headings-font-family;
-            font-weight: 300;
-            font-size: 2em;
-        }
-
-        .skills {
-            font-size: 1.25em;
-            font-weight: 300;
-            display: block;
-        }
+        font-size: 1.25em;
+        font-weight: 300;
+        display: block;
+        margin-bottom: 20px;
     }
 
-    .action-buttons {
-        margin-top: 30px;
+    .downloads {
+        .browsers {
+            display: none;
+        }
 
-        div + div {
-            margin-top: 20px;
+        .mobile {
+            margin: 0 -10px 0 0;
         }
     }
 }
@@ -84,23 +84,31 @@ header {
 @media(min-width:@screen-sm) {
     header {
         .container {
-            padding-top: 130px;
-            padding-bottom: 50px;
+            padding-top: 110px;
+            padding-bottom: 30px;
         }
 
         .intro-text {
-            .name {
-                font-size: 4.75em;
-            }
-
-            .skills {
-                font-size: 1.75em;
-            }
+            font-size: 1.75em;
+            margin-bottom: 30px;
         }
 
-        .action-buttons {
-            div + div {
-                margin-top: 0;
+        .downloads {
+            div {
+                display: inline-block;
+            }
+
+            .browsers {
+                margin-right: 70px;
+                display: inline-block;
+
+                img {
+                    margin-right: 20px;
+                }
+            }
+
+            .mobile {
+                margin: 0;
             }
         }
     }
@@ -112,7 +120,7 @@ header {
 
         .navbar-brand {
             font-size: 2em;
-            padding: 14px 15px;
+            padding: 10px 15px;
         }
     }
 }
@@ -124,10 +132,12 @@ header {
 
     .navbar-nav {
         letter-spacing: 1px;
+        margin-right: 70px;
     }
 
     .navbar-brand {
         color: white;
+        height: auto;
     }
 }
 
@@ -140,7 +150,7 @@ header {
         color: white;
 
         &:hover {
-            background: darken(@brand-secondary, 5%);
+            background: darken(@brand-dark-accent, 5%);
         }
     }
 }
@@ -184,7 +194,62 @@ section.primary {
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 71px;
     color: white;
     background-color: @brand-dark-accent;
     padding: 25px 0;
+}
+
+.content {
+    padding-top: 120px;
+}
+
+.github-corner {
+    display: none;
+
+    @media(min-width:@screen-sm) {
+        display: block;
+    }
+
+    svg {
+        fill: @brand-secondary;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        border: 0;
+        right: 0;
+        z-index: 99999;
+    }
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+    0%,100% {
+        transform: rotate(0);
+    }
+
+    20%,60% {
+        transform: rotate(-25deg);
+    }
+
+    40%,80% {
+        transform: rotate(10deg);
+    }
+}
+
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
 }

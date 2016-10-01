@@ -47,9 +47,7 @@ gulp.task('clean', ['clean:js', 'clean:lib', 'clean:dist', 'clean:css']);
 gulp.task('min:js', ['clean:js'], function () {
     return gulp.src([
             paths.jsDir + '**/*.js',
-            '!' + paths.jsDir + '**/*.min.js',
-            paths.npmDir + 'animated-header/js/classie.js',
-            paths.npmDir + 'animated-header/js/cbpAnimatedHeader.js'
+            '!' + paths.jsDir + '**/*.min.js'
          ], { base: '.' })
         .pipe(concat(paths.concatJsDest))
         .pipe(uglify())

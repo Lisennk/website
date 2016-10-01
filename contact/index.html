@@ -1,0 +1,54 @@
+---
+layout: default
+title: Contact
+---
+
+
+<section class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-lg-offset-2">
+                <h2><i class="fa fa-shield"></i> Email Us</h2>
+                <hr class="shield-primary">
+                <form action="https://formspree.io/hello@bitwarden.com" method="post">
+                    <input type="hidden" name="_subject" value="bitwarden.com contact" />
+                    <input type="text" name="_gotcha" style="display: none;" />
+                    <input type="hidden" name="_next" value="https://bitwarden.com/contact/?emailed=true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Send us an email and we'll get back to you.</div>
+                        <div class="panel-body">
+                            <div class="alert alert-success" id="email-success" style="display: none;">
+                                Your message has been sent. We'll get back to you soon.
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="sr-only">Message</label>
+                                <textarea rows="8" id="message" name="message" class="form-control" placeholder="Message..." required></textarea>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="submit" class="btn btn-lg btn-primary">Send Email</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    if (location.search === "?emailed=true") {
+        document.getElementById("email-success").style.display = "block";
+
+        if (history.replaceState) {
+            history.replaceState({}, '', location.pathname);
+        }
+    }
+</script>
