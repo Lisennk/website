@@ -1,0 +1,255 @@
+@import "../node_modules/bootstrap/less/bootstrap.less";
+@import "variables.less";
+@import "mixins.less";
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 71px;
+    background: url(../images/white_tiles.png);
+}
+
+p {
+    font-size: 20px;
+}
+
+p.small {
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+hr.shield-light,
+hr.shield-primary {
+    padding: 0;
+    border: none;
+    border-top: solid 3px;
+    text-align: center;
+    margin: 25px auto 30px;
+}
+
+hr.shield-light {
+    border-color: white;
+}
+
+hr.shield-light:after {
+    background-color: @brand-primary;
+    color: white;
+}
+
+hr.shield-primary {
+    border-color: @brand-secondary;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+
+    .container {
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
+
+    img {
+        margin: 0 auto;
+    }
+
+    .intro-text {
+        font-size: 1.25em;
+        font-weight: 300;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .downloads {
+        .browsers {
+            display: none;
+        }
+
+        .mobile {
+            margin: 0 -10px 0 0;
+        }
+    }
+}
+
+@media(min-width:@screen-sm) {
+    header {
+        .container {
+            padding-top: 110px;
+            padding-bottom: 30px;
+        }
+
+        .intro-text {
+            font-size: 1.75em;
+            margin-bottom: 30px;
+        }
+
+        .downloads {
+            div {
+                display: inline-block;
+            }
+
+            .browsers {
+                margin-right: 70px;
+                display: inline-block;
+
+                img {
+                    margin-right: 20px;
+                }
+            }
+
+            .mobile {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media(min-width: @screen-sm) {
+    .navbar-fixed-top {
+        padding: 15px 0;
+
+        .navbar-brand {
+            font-size: 2em;
+            padding: 10px 15px;
+        }
+    }
+}
+
+.navbar {
+    font-family: @headings-font-family;
+    font-weight: 300;
+    color: white;
+
+    .navbar-nav {
+        letter-spacing: 1px;
+        margin-right: 70px;
+    }
+
+    .navbar-brand {
+        color: white;
+        height: auto;
+    }
+}
+
+.navbar-default,
+.navbar-inverse {
+    border: none;
+    background: @brand-dark-accent;
+
+    .navbar-nav > li > a {
+        color: white;
+
+        &:hover {
+            background: darken(@brand-dark-accent, 5%);
+        }
+    }
+}
+
+section {
+    padding: 50px 0;
+    color: @brand-secondary;
+
+    h2 {
+        margin: 0;
+        font-size: 2em;
+    }
+}
+
+
+@media(min-width:@screen-sm) {
+    section {
+        h2 {
+            font-size: 3em;
+        }
+    }
+}
+
+section.primary {
+    background: @brand-primary;
+    color: white;
+
+    a,
+    a:hover,
+    a:focus,
+    a:active,
+    a.active {
+        color: @brand-secondary;
+    }
+}
+
+@media(max-width:@screen-sm-max) {
+    section.first {
+        padding-top: 75px;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 71px;
+    color: white;
+    background-color: @brand-dark-accent;
+    padding: 25px 0;
+}
+
+.content {
+    padding-top: 120px;
+}
+
+.github-corner {
+    display: none;
+
+    @media(min-width:@screen-sm) {
+        display: block;
+    }
+
+    svg {
+        fill: @brand-secondary;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        border: 0;
+        right: 0;
+        z-index: 99999;
+    }
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+    0%,100% {
+        transform: rotate(0);
+    }
+
+    20%,60% {
+        transform: rotate(-25deg);
+    }
+
+    40%,80% {
+        transform: rotate(10deg);
+    }
+}
+
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
+}
