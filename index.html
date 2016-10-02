@@ -50,10 +50,12 @@
                         <a href="/contact"><i class="fa fa-envelope fa-fw"></i> Contact</a>
                     </li>
                     <li>
-                        <a href="https://vault.bitwarden.com/#register"><i class="fa fa-pencil-square-o fa-fw"></i> Register</a>
+                        <a href="https://vault.bitwarden.com/#register" onclick="gaEvent('Nav Register')">
+                        <i class="fa fa-pencil-square-o fa-fw"></i> Register</a>
                     </li>
                     <li>
-                        <a href="https://vault.bitwarden.com/#login"><i class="fa fa-sign-in fa-fw"></i> Log In</a>
+                        <a href="https://vault.bitwarden.com/#login" onclick="gaEvent('Nav Login')">
+                        <i class="fa fa-sign-in fa-fw"></i> Log In</a>
                     </li>
                 </ul>
             </div>
@@ -62,12 +64,20 @@
 
     <header>
     <div class="container">
-        <img src="/images/devices.png" alt="The bitwarden Vault" usemap="#image-map" class="img-responsive" width="1130" height="485" />
+        <img src="/images/devices.png" alt="The bitwarden Vault" usemap="#image-map" class="img-responsive"
+             width="1130" height="485" />
         <map name="image-map" id="img-map">
-            <area alt="bitwarden iOS Vault" title="bitwarden iOS Vault" href="https://itunes.apple.com/us/app/bitwarden-free-password-manager/id1137397744?mt=8" shape="rect" coords="616,34,915,443" style="outline:none;" target="_blank" />
-            <area alt="bitwarden Android Vault" title="bitwarden Android Vault" href="https://play.google.com/store/apps/details?id=com.x8bit.bitwarden" shape="rect" coords="925,125,1095,448" style="outline:none;" target="_blank" />
-            <area alt="bitwarden Browser Extension Vault" title="bitwarden Browser Extension Vault" href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" shape="rect" coords="458,37,560,209" style="outline:none;" target="_blank" />
-            <area alt="bitwarden Web Vault" title="bitwarden Web Vault" href="https://vault.bitwarden.com/" shape="rect" coords="128,38,454,339" style="outline:none;" target="_blank" />
+            <area alt="bitwarden iOS Vault" title="bitwarden iOS Vault"
+                  href="https://itunes.apple.com/us/app/bitwarden-free-password-manager/id1137397744?mt=8"
+                  shape="rect" coords="616,34,915,443" style="outline:none;" target="_blank" />
+            <area alt="bitwarden Android Vault" title="bitwarden Android Vault"
+                  href="https://play.google.com/store/apps/details?id=com.x8bit.bitwarden"
+                  shape="rect" coords="925,125,1095,448" style="outline:none;" target="_blank" />
+            <area alt="bitwarden Browser Extension Vault" title="bitwarden Browser Extension Vault"
+                  href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb"
+                  shape="rect" coords="458,37,560,209" style="outline:none;" target="_blank" />
+            <area alt="bitwarden Web Vault" title="bitwarden Web Vault" href="https://vault.bitwarden.com/"
+                  shape="rect" coords="128,38,454,339" style="outline:none;" target="_blank" />
         </map>
         <div class="intro-text">
             bitwarden is the easiest and safest way to store all of your passwords across all of your devices.
@@ -75,10 +85,10 @@
         </div>
         <div class="downloads">
             <div class="browsers">
-                <a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/" target="_blank" title="Get bitwarden for Firefox"><img width="57" height="54" alt="Firefox Extension" src="/images/firefox.png"></a><a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" title="Get bitwarden for Chrome" target="_blank"><img width="53" height="54" alt="Chrome Extension" src="/images/chrome.png"></a><a href="javascript:void(0)" title="Get bitwarden for Opera" data-toggle="popover" data-content="The Opera extension is current in review and will be avilable very soon."><img width="53" height="54" alt="Opera Extension" src="/images/opera.png"></a><a href="javascript:void(0)" title="Get bitwarden for Edge" data-toggle="popover" data-content="Unfortunately Microsoft has not yet made extensions for Edge publicly available. As soon as they do, bitwarden will immediately be made available for Edge."><img width="52" height="54" alt="Edge Extension" src="/images/edge.png"></a>
+                <a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/" onclick="gaEvent('Header Firefox')" target="_blank" title="Get bitwarden for Firefox"><img width="57" height="54" alt="Firefox Extension" src="/images/firefox.png"></a><a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" onclick="gaEvent('Header Chrome')" title="Get bitwarden for Chrome" target="_blank"><img width="53" height="54" alt="Chrome Extension" src="/images/chrome.png"></a><a href="javascript:void(0)" onclick="gaEvent('Header Opera')" title="Get bitwarden for Opera" data-toggle="popover" data-content="The Opera extension is current in review and will be avilable very soon."><img width="53" height="54" alt="Opera Extension" src="/images/opera.png"></a><a href="javascript:void(0)" onclick="gaEvent('Header Edge')" title="Get bitwarden for Edge" data-toggle="popover" data-content="Unfortunately Microsoft has not yet made extensions for Edge publicly available. As soon as they do, bitwarden will immediately be made available for Edge."><img width="52" height="54" alt="Edge Extension" src="/images/edge.png"></a>
             </div>
             <div class="mobile">
-                <a href="https://play.google.com/store/apps/details?id=com.x8bit.bitwarden" title="Get bitwarden on Google Play" target="_blank"><img src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" width="129" height="45" alt="Get bitwarden on Google Play"></a><a href="https://itunes.apple.com/us/app/bitwarden-free-password-manager/id1137397744?mt=8" target="_blank" title="Get bitwarden for iOS"><img src="https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg" width="165" height="40" alt="Get bitwarden for iOS" style="margin-right: -15px;"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.x8bit.bitwarden" onclick="gaEvent('Header Android')" title="Get bitwarden on Google Play" target="_blank"><img src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" width="129" height="45" alt="Get bitwarden on Google Play"></a><a href="https://itunes.apple.com/us/app/bitwarden-free-password-manager/id1137397744?mt=8" onclick="gaEvent('Header iOS')" target="_blank" title="Get bitwarden for iOS"><img src="https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg" width="165" height="40" alt="Get bitwarden for iOS" style="margin-right: -15px;"></a>
             </div>
         </div>
     </div>
@@ -128,8 +138,8 @@
                     if we wanted to.
                 </p>
                 <p>
-                    Your data is sealed with <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">AES-256</a>
-                    bit encryption, salted hashing, and <a href="https://en.wikipedia.org/wiki/PBKDF2" target="_blank">PBKDF2</a> SHA-256.
+                    Your data is sealed with <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank" onclick="gaEvent('AES-256')">AES-256</a>
+                    bit encryption, salted hashing, and <a href="https://en.wikipedia.org/wiki/PBKDF2" target="_blank" onclick="gaEvent('PBKDF2')">PBKDF2</a> SHA-256.
                 </p>
             </div>
             <div class="col-lg-2 text-center hidden-xs col-sm-3">
@@ -174,8 +184,8 @@
                     That's why bitwarden is 100% open source software.
                 </p>
                 <p>
-                    Check us out on <a href="https://github.com/bitwarden" target="_blank">GitHub</a>. Contributions, code
-                    reviews, and other feedback are welcome.
+                    Check us out on <a href="https://github.com/bitwarden" onclick="gaEvent('OSS GitHub')" target="_blank">GitHub</a>.
+                    Contributions, code reviews, and other feedback are welcome.
                 </p>
             </div>
             <div class="col-lg-2 text-right text-center hidden-xs col-sm-3">
@@ -186,23 +196,25 @@
 </section>
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-lg-8 col-lg-offset-2">
             <div class="action-buttons">
                 <h2>Let's Get Started</h2>
                 <div class="row">
                     <div class="col-sm-6">
-                        <a href="https://vault.bitwarden.com/#register" class="btn btn-secondary btn-xl btn-block">Create Account</a>
+                        <a href="https://vault.bitwarden.com/#register" onclick="gaEvent('Get Started Register')"
+                           class="btn btn-secondary btn-xl btn-block">Create Account</a>
                     </div>
                     <div class="col-sm-6">
-                        <a href="https://vault.bitwarden.com/#login" class="btn btn-secondary btn-xl btn-block">Log In</a>
+                        <a href="https://vault.bitwarden.com/#login" onclick="gaEvent('Get Started Login')"
+                           class="btn btn-secondary btn-xl btn-block">Log In</a>
                     </div>
                 </div>
                 <div class="row downloads">
                     <div class="col-sm-6 browsers">
-                        <a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/" target="_blank" title="Get bitwarden for Firefox"><img width="57" height="54" alt="Firefox Extension" src="/images/firefox.png"></a><a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" title="Get bitwarden for Chrome" target="_blank"><img width="53" height="54" alt="Chrome Extension" src="/images/chrome.png"></a><a href="javascript:void(0)" title="Get bitwarden for Opera" data-toggle="popover" data-content="The Opera extension is current in review and will be avilable very soon."><img width="53" height="54" alt="Opera Extension" src="/images/opera.png"></a><a href="javascript:void(0)" title="Get bitwarden for Edge" data-toggle="popover" data-content="Unfortunately Microsoft has not yet made extensions for Edge publicly available. As soon as they do, bitwarden will immediately be made available for Edge."><img width="52" height="54" alt="Edge Extension" src="/images/edge.png"></a>
+                        <a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/" onclick="gaEvent('Get Started Firefox')" target="_blank" title="Get bitwarden for Firefox"><img width="57" height="54" alt="Firefox Extension" src="/images/firefox.png"></a><a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" onclick="gaEvent('Get Started Chrome')" title="Get bitwarden for Chrome" target="_blank"><img width="53" height="54" alt="Chrome Extension" src="/images/chrome.png"></a><a href="javascript:void(0)" onclick="gaEvent('Get Started Opera')" title="Get bitwarden for Opera" data-toggle="popover" data-content="The Opera extension is current in review and will be avilable very soon."><img width="53" height="54" alt="Opera Extension" src="/images/opera.png"></a><a href="javascript:void(0)" onclick="gaEvent('Get Started Edge')" title="Get bitwarden for Edge" data-toggle="popover" data-content="Unfortunately Microsoft has not yet made extensions for Edge publicly available. As soon as they do, bitwarden will immediately be made available for Edge."><img width="52" height="54" alt="Edge Extension" src="/images/edge.png"></a>
                     </div>
                     <div class="col-sm-6 mobile">
-                        <a href="https://play.google.com/store/apps/details?id=com.x8bit.bitwarden" title="Get bitwarden on Google Play" target="_blank"><img src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" width="129" height="45" alt="Get bitwarden on Google Play"></a><a href="https://itunes.apple.com/us/app/bitwarden-free-password-manager/id1137397744?mt=8" target="_blank" title="Get bitwarden for iOS"><img src="https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg" width="165" height="40" alt="Get bitwarden for iOS" style="margin-right: -15px;"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.x8bit.bitwarden" onclick="gaEvent('Get Started Android')" title="Get bitwarden on Google Play" target="_blank"><img src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" width="129" height="45" alt="Get bitwarden on Google Play"></a><a href="https://itunes.apple.com/us/app/bitwarden-free-password-manager/id1137397744?mt=8" onclick="gaEvent('Get Started iOS')" target="_blank" title="Get bitwarden for iOS"><img src="https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg" width="165" height="40" alt="Get bitwarden for iOS" style="margin-right: -15px;"></a>
                     </div>
                 </div>
             </div>
@@ -215,7 +227,8 @@
         &copy; Copyright  2015 - 2016, 8bit Solutions LLC
     </footer>
 
-    <a href="https://github.com/bitwarden" target="_blank" class="github-corner" aria-label="View source on Github">
+    <a href="https://github.com/bitwarden" target="_blank" class="github-corner" aria-label="View source on Github"
+       onclick="gaEvent('GitHub Corner')">
         <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
             <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
             <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
@@ -241,6 +254,13 @@
 
         ga('create', 'UA-81915606-4', 'auto');
         ga('send', 'pageview');
+
+        function gaEvent(action) {
+            ga('send', {
+                hitType: 'event',
+                eventAction: action
+            });
+        }
     </script>
 </body>
 </html>

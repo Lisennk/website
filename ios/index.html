@@ -50,10 +50,12 @@
                         <a href="/contact"><i class="fa fa-envelope fa-fw"></i> Contact</a>
                     </li>
                     <li>
-                        <a href="https://vault.bitwarden.com/#register"><i class="fa fa-pencil-square-o fa-fw"></i> Register</a>
+                        <a href="https://vault.bitwarden.com/#register" onclick="gaEvent('Nav Register')">
+                        <i class="fa fa-pencil-square-o fa-fw"></i> Register</a>
                     </li>
                     <li>
-                        <a href="https://vault.bitwarden.com/#login"><i class="fa fa-sign-in fa-fw"></i> Log In</a>
+                        <a href="https://vault.bitwarden.com/#login" onclick="gaEvent('Nav Login')">
+                        <i class="fa fa-sign-in fa-fw"></i> Log In</a>
                     </li>
                 </ul>
             </div>
@@ -69,8 +71,10 @@
             <div class="col-md-4 text-left">
                 <h2>bitwarden iOS Vault</h2>
                 <p>bitwarden is available in the Apple App Store. Download the app and sync it to your vault today!</p>
-                <a href="https://itunes.apple.com/us/app/bitwarden-free-password-manager/id1137397744?mt=8" target="_blank" title="Get bitwarden for iOS">
-                    <img src="https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg" width="165" height="40" alt="Get bitwarden for iOS" style="margin-left: -15px;">
+                <a href="https://itunes.apple.com/us/app/bitwarden-free-password-manager/id1137397744?mt=8"
+                   onclick="gaEvent('Header iOS')" target="_blank" title="Get bitwarden for iOS">
+                    <img src="https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg"
+                         width="165" height="40" alt="Get bitwarden for iOS" style="margin-left: -15px;">
                 </a>
             </div>
         </div>
@@ -82,8 +86,13 @@
         <div class="col-lg-6 col-lg-offset-2 col-sm-9">
             <h2><i class="fa fa-shield"></i> Auto-fill Logins</h2>
             <hr class="shield-light">
-            <p>Through the use of the included app extension, the bitwarden iOS vault supports auto-filling logins through Safari, Chrome, and hundreds of other supported apps.</p>
-            <a class="btn btn-xl btn-default" href="#supported-apps">See Supported Apps</a>
+            <p>
+                Through the use of the included app extension, the bitwarden iOS vault supports auto-filling
+                logins through Safari, Chrome, and hundreds of other supported apps.
+            </p>
+            <a class="btn btn-xl btn-default" href="#supported-apps" onclick="gaEvent('See Supported Apps')">
+                See Supported Apps
+            </a>
         </div>
         <div class="col-lg-2 col-sm-3">
             <img src="/images/ios-autofill.png" alt="Autofill through Safari" />
@@ -366,7 +375,8 @@
         &copy; Copyright  2015 - 2016, 8bit Solutions LLC
     </footer>
 
-    <a href="https://github.com/bitwarden" target="_blank" class="github-corner" aria-label="View source on Github">
+    <a href="https://github.com/bitwarden" target="_blank" class="github-corner" aria-label="View source on Github"
+       onclick="gaEvent('GitHub Corner')">
         <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
             <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
             <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
@@ -392,6 +402,13 @@
 
         ga('create', 'UA-81915606-4', 'auto');
         ga('send', 'pageview');
+
+        function gaEvent(action) {
+            ga('send', {
+                hitType: 'event',
+                eventAction: action
+            });
+        }
     </script>
 </body>
 </html>
