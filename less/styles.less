@@ -71,6 +71,14 @@ header {
     }
 }
 
+header#ios {
+    @media(min-width:@screen-sm) {
+        h2 {
+            margin-top: 75px;
+        }
+    }
+}
+
 .downloads {
     .browsers {
         display: none;
@@ -124,6 +132,12 @@ header {
             padding: 10px 15px;
         }
     }
+
+    .navbar {
+        .navbar-nav {
+            margin-right: 70px;
+        }
+    }
 }
 
 .navbar {
@@ -131,14 +145,13 @@ header {
     font-weight: 300;
     color: white;
 
-    .navbar-nav {
-        letter-spacing: 1px;
-        margin-right: 70px;
-    }
-
     .navbar-brand {
         color: white;
         height: auto;
+    }
+
+    .navbar-nav {
+        letter-spacing: 1px;
     }
 }
 
@@ -153,6 +166,14 @@ header {
         &:hover {
             background: darken(@brand-dark-accent, 5%);
         }
+    }
+
+    .navbar-toggle {
+        border-color: darken(@brand-dark-accent, 5%);
+    }
+
+    .navbar-toggle:focus, .navbar-toggle:hover {
+        background-color: @brand-secondary;
     }
 }
 

@@ -1,5 +1,6 @@
 # Build settings
 markdown: kramdown
 permalink: pretty
+encoding: UTF-8
 
 exclude: [node_modules, gulpfile.js, package.json, js/bit.js, css/styles.css, ./bitwarden-website, less]
